@@ -53,15 +53,15 @@ graph TB;
 # Used tech
 ## Wireguard
 Wireguard is "extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache". From my experience it is truely easy to setup with only three main sources of information: 
-    - The wireguard [home page](https://www.wireguard.com/). 
-    - The dedicated [Archwiki section](https://wiki.archlinux.org/title/WireGuard).
-    - The Pro Custodibus [Wireguard](https://docs.procustodibus.com/guide/wireguard/) articles.
+- The wireguard [home page](https://www.wireguard.com/). 
+- The dedicated [Archwiki section](https://wiki.archlinux.org/title/WireGuard).
+- The Pro Custodibus [Wireguard](https://docs.procustodibus.com/guide/wireguard/) articles.
 
 An important point to understand is that in a wireguard topology there is neither client nor server. All hosts are peers.:
 Once the basics understood from the Wireguard documentation, we could use three different approaches (understand [differents topologies](https://www.procustodibus.com/blog/2020/10/wireguard-topologies/)):
-    - A point to point configuration - Here for each connection, the Guacamole server should have a new peer and be able to reach them through the router firewall.
-    - A Point to site configuration - the classical VPN client/server approach. 
-    - A Hub and Spoke configuration where one peer is considered as an intermediate between multiple hosts. This peer acts as a router among the WireGuard endpoints.
+- A point to point configuration - Here for each connection, the Guacamole server should have a new peer and be able to reach them through the router firewall.
+- A Point to site configuration - the classical VPN client/server approach. 
+- A Hub and Spoke configuration where one peer is considered as an intermediate between multiple hosts. This peer acts as a router among the WireGuard endpoints.
 
 I decided to keep the third option here. The topology is just a little bit easier because both the HUB and many spokes are behind the same router.   
 
